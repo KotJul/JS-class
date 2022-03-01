@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            left:20px;
+            top:20px;
+        }
+    </style>
+</head>
+<!--
+<body>
+     <p>0</p>
+    <input class = "button-minus" type="button" value="-">
+    <input class = "button-plus" type="button" value="+">
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <script>
+        const li = document.querySelectorAll('ul > li');
+        function handle(event) {
+                this.style.backgroundColor = "green";
+              
+            }
+        
+        li.forEach(li => li.addEventListener('click', handle));
+
+
+
+        const p = document.querySelector('p');
+        const minus = document.querySelector('.button-minus');
+        const plus = document.querySelector('.button-plus');
+
+        minus.addEventListener('click',() => {p.textContent = Number.parseInt(p.textContent) -1}); /*создаем событие на переменной minus,() => {}(стрелочная функция)
+        в ней пишем переменную p и ищем текст в этой переменной, преобразуем текст в число Number.parseInt и в () вставляем измененый p и отминусовываем 1( будет при нажатии отнимать 1)*/ 
+
+        plus.addEventListener('click',() => {p.textContent = Number.parseInt(p.textContent) +1});
+
+        plus.addEventListener('contextmenu',() => {p.textContent = Number.parseInt(p.textContent) +1});/*прибавляеться при нажатии правой кнопки мыши*/
+ 
+
+    </script>-->
+
+
+    <!-- <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <button> add </button>
+</body>
+<script>
+    const ul = document.body.querySelectorAll('ul');
+    ul.addEventListener('click', (event) => {
+        if(event.target.tagName === 'LI'){
+            event.target.style.backgroundColor = 'red';
+        }
+    }) 
+    /*дописать* с телеги фото 3 */
+</script>-->
+<body>
+
+    <div>
+
+    </div>
+    <script>
+        const div = document.body.querySelector('div');
+        document.body.addEventListener('click',function(event){/* если вместо click поставить mousemove , будет при нажатии двигаться*/
+            div.style.left = event.clientX + 'px';
+            div.style.top = event.clientY + 'px';
+        })
+
+        document.body.addEventListener('mouseover',function(event){
+            div.style.left = (Number.parseInt(div.style.left)|| 0) +Math.random()*200 + 'px';/*сделать  то же с top квадрат будет убегать и его нельзя нажать*/
+
+    </script>
+</body>
+</html>
