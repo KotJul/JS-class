@@ -1,0 +1,86 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        div {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <script>/*создать 1000 дивов и разукрасить их рандомно*/ 
+        function randomColor() {/*функция рандомного цвета*/
+            return '#' + Math.ceil(Math.random() * 1000);
+        }
+        for (let i = 0; i < 1000; i++) {
+            const div = document.createElement('div');
+            document.body.prepend(div);
+        }
+        document.body.addEventListener('click', function (event) {
+            if (event.tagName != 'DIV'){/*закрашивает только DIV*/
+             event.target.style.backgroundColor = randomColor();
+            }
+        })
+    </script>
+</body>
+</html> 
+**************************************************************************-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        tr,
+        td {
+            padding: 10px 20px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        const div = document.createElement('div');
+        document.body.prepend(div);
+        let table = document.createElement('table');
+        let thead = document.createElement('thead');
+        let tbody = document.createElement('tbody');
+
+        table.appendChild(thead);
+        table.appendChild(tbody);
+    
+        document.querySelector('body').appendChild(table);
+
+        function getRow(count, rowNumber) {
+            const tr = document.createElement('tr');
+            for (let i = 1; i < count; i++) {
+                const td = document.createElement('td');
+                td.textContent = `${rowNumber} - ${i}`;
+                tr.apper(td);
+            }
+            const table = document.createElement('table');
+            document.body.append('table');
+        }
+        
+    </script>
+</body>
+
+</html>
